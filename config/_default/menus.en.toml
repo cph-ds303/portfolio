@@ -52,6 +52,12 @@
 #  pageRef = "tags"
 #  weight = 30
 
+[[main]]
+	name = "GitHub"
+	pre = "github"
+	url = "https://github.com/cph-ds303"
+	weight = 100
+
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
