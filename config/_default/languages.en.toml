@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Blowfish"
+title = "Portfolio"
 
 [params]
   displayName = "EN"
@@ -15,7 +15,7 @@ title = "Blowfish"
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [params.author]
-  name = ""
+  name = "Your Name"
   links = [
     { github = "https://github.com/cph-ds303" }
   ]
