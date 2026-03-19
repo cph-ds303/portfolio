@@ -65,7 +65,7 @@ body {
     linear-gradient(180deg, rgba(33, 5, 53, 0.84), rgba(33, 5, 53, 0.94)),
     radial-gradient(circle at 14% 18%, rgba(var(--theme-secondary-rgb), 0.26), transparent 36%),
     radial-gradient(circle at 82% 10%, rgba(var(--theme-primary-rgb), 0.3), transparent 34%),
-    url("/images/purple-universe-wallpaper.jpg");
+    url("../images/purple-universe-wallpaper.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
