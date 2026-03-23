@@ -15,7 +15,7 @@ title = "Portfolio"
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [params.author]
-  name = "Your Name"
+  name = "Dino Saldic"
   links = [
     { github = "https://github.com/cph-ds303" }
   ]
