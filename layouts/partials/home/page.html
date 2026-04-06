@@ -1,11 +1,21 @@
-<article class="max-w-full prose dark:prose-invert">
+<article class="homepage-intro">
   {{ with .Title }}
-    <header>
-      <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ . | emojify }}</h1>
+    <header class="homepage-intro__header">
+      <h1 class="homepage-intro__title">{{ . | emojify }}</h1>
     </header>
   {{ end }}
-  <section class="w-full">{{ .Content }}</section>
+  <section class="homepage-intro__content prose dark:prose-invert">{{ .Content }}</section>
 </article>
-<section>
+<section class="homepage-feature-links" aria-label="Featured links">
+  <a class="homepage-feature-card" href="{{ "projects/eru-project/" | relLangURL }}">
+    <span class="homepage-feature-card__kicker">Project</span>
+    <h2 class="homepage-feature-card__title">My most recent project.</h2>
+  </a>
+  <a class="homepage-feature-card" href="{{ "blog/first-steps/" | relLangURL }}">
+    <span class="homepage-feature-card__kicker">Blog Post</span>
+    <h2 class="homepage-feature-card__title">My first ever code.</h2>
+  </a>
+</section>
+<section class="homepage-recent">
   {{ partial "recent-articles/main.html" . }}
 </section>

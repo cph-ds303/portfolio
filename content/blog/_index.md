@@ -1,4 +1,4 @@
 ---
 title: "Blog"
-description: "Blogindlæg om projekter, læring og udvikling"
+description: "Posts about projects, learning, and development"
 ---
