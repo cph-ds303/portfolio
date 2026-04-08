@@ -1,5 +1,5 @@
 ---
-title: "Welcome to eru."
+title: "Welcome to eru"
 description: "A short introduction to the project."
 date: 2026-03-23
 weight: 5
@@ -7,13 +7,13 @@ weight: 5
 
 ## What is eru?
 
-In its essence, eru is an app designed to make your **doom-scrolling worth remembering**.
-Instead of mindless memes, eru will give you **memorable quotes, scientific theories, and interesting facts** without the need for a boring lecture.
+In its essence, eru is a project designed to make your **doom-scrolling worth remembering**.
+The idea is to create a platform that can deliver **memorable quotes, scientific theories, and interesting facts** without the need for a boring lecture.
 
-## The one app to rule them all
+## The one idea to rule them all
 
 The name eru isn't from this earth at all. It originates from J.R.R. Tolkien's *Lord of the Rings* universe, where Eru is the omniscient god of everything, with Eru literally meaning **"The One."**
-While this app isn't an all-knowing perfect being, maybe it can still help some people throw some bad habits into **Mount Doom**.
+While the project isn't an all-knowing perfect being, maybe it can still help some people throw some bad habits into **Mount Doom**.
 
 ## Why did I need eru?
 

@@ -424,6 +424,72 @@ a[role="button"]:hover {
   color: rgba(var(--theme-secondary-rgb), 0.95);
 }
 
+.exam-portfolio-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.exam-week-card {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 1.35rem 1.25rem 1.4rem;
+  border: 1px solid rgba(var(--theme-border-rgb), 0.5);
+  border-radius: 1.25rem;
+  background:
+    linear-gradient(160deg, rgba(var(--theme-surface-strong-rgb), 0.95), rgba(var(--theme-surface-rgb), 0.84)),
+    radial-gradient(circle at top right, rgba(var(--theme-secondary-rgb), 0.12), transparent 34%);
+  box-shadow: 0 14px 30px rgba(10, 3, 17, 0.18);
+  overflow: hidden;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.exam-week-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 0.2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(var(--theme-secondary-rgb), 0.22),
+    rgba(var(--theme-accent-rgb), 0.9),
+    rgba(var(--theme-secondary-rgb), 0.22)
+  );
+}
+
+.exam-week-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(var(--theme-secondary-rgb), 0.85);
+  box-shadow: 0 22px 42px rgba(10, 3, 17, 0.24);
+  text-decoration: none;
+}
+
+.exam-week-card__eyebrow {
+  margin: 0 0 0.6rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(var(--theme-secondary-rgb), 0.95);
+}
+
+.exam-week-card__title {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.exam-week-card__body {
+  margin: 0;
+  color: rgba(var(--theme-text-rgb), 0.84);
+  line-height: 1.8;
+}
+
 .homepage-feature-links {
   display: grid;
   gap: 1rem;
@@ -483,8 +549,18 @@ a[role="button"]:hover {
     padding: 3rem;
   }
 
+  .exam-portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .homepage-feature-links {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .exam-portfolio-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
