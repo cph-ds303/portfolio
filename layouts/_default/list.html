@@ -40,7 +40,8 @@
     </div>
   </section>
 
-  {{ if gt .Pages 0 }}
+  {{ $hideChildList := .Params.hideChildList | default false }}
+  {{ if and (gt .Pages 0) (not $hideChildList) }}
     {{ $cardView := .Params.cardView | default (site.Params.list.cardView | default false) }}
     {{ $cardViewScreenWidth := .Params.cardViewScreenWidth | default (site.Params.list.cardViewScreenWidth | default false) }}
     {{ $groupByYear := .Params.groupByYear | default (site.Params.list.groupByYear | default false) }}
@@ -125,7 +126,7 @@
           {{ end }}
         {{ end }}
       {{ end }}
-  {{ else }}
+  {{ else if not $hideChildList }}
     <section class="mt-10 prose dark:prose-invert">
       <p class="py-8 border-t">
         <em>{{ i18n "list.no_articles" | emojify }}</em>
@@ -133,4 +134,30 @@
     </section>
   {{ end }}
   {{ partial "pagination.html" . }}
+
+  {{ if in .RelPermalink "/projects/eru-project/exam-portfolio/" }}
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const updateMotionChrome = () => {
+          const scrollTop = window.scrollY || window.pageYOffset;
+          const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = scrollHeight > 0 ? Math.min(scrollTop / scrollHeight, 1) : 0;
+          document.documentElement.style.setProperty("--portfolio-scroll-progress", progress.toString());
+          document.documentElement.style.setProperty("--portfolio-parallax-offset", `${scrollTop * -0.025}px`);
+        };
+
+        updateMotionChrome();
+        let ticking = false;
+        window.addEventListener("scroll", () => {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              updateMotionChrome();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }, { passive: true });
+      });
+    </script>
+  {{ end }}
 {{ end }}

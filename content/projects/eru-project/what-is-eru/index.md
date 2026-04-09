@@ -32,3 +32,7 @@ On average, I spend 2-3 hours on my phone a day, which roughly equates to a thou
 This is where **eru** comes in.
 I wanted to make something to counteract the negative effect that doom-scrolling had on me.
 So what if I could actually **learn something while scrolling**? Let's be honest, it would be a lot easier to have a healthy media platform than it would be to kick the phone addiction altogether.
+
+<div class="exam-portfolio-pagination">
+  <a role="button" href="../exam-portfolio/">Go to Exam Portfolio</a>
+</div>
