@@ -1,12 +1,12 @@
 ---
-title: "Exam Portfolio"
-description: "Exam portfolio"
+title: "Backend Process"
+description: "Backend process"
 date: 2026-04-07
 weight: 10
 hideChildList: true
 ---
 
-Welcome to my exam portfolio for **eru**, a backend API developed during the third semester backend course.
+Welcome to my backend exam portfolio for **eru**, a backend API developed during the third semester backend course.
 
 This portfolio documents how the project evolved from an early idea into a deployed Java backend with authentication, content management, user interactions, AI-based elaboration, testing, and deployment.
 
@@ -16,6 +16,7 @@ eru is a backend for a learning-focused content platform built around short educ
 
 <div class="exam-portfolio-pagination">
   <a role="button" href="../what-is-eru/">The story behind eru</a>
+  <a role="button" href="../frontend-process/">Go to Frontend Process</a>
 </div>
 
 ## Chapter Overview

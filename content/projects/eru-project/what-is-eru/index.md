@@ -34,5 +34,6 @@ I wanted to make something to counteract the negative effect that doom-scrolling
 So what if I could actually **learn something while scrolling**? Let's be honest, it would be a lot easier to have a healthy media platform than it would be to kick the phone addiction altogether.
 
 <div class="exam-portfolio-pagination">
-  <a role="button" href="../exam-portfolio/">Go to Exam Portfolio</a>
+  <a role="button" href="../exam-portfolio/">Go to Backend Process</a>
+  <a role="button" href="../frontend-process/">Go to Frontend Process</a>
 </div>
