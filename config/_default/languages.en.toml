@@ -16,8 +16,9 @@ title = "Portfolio"
 
 [params.author]
   name = "Dino Saldic"
+  email = "dinosaldic.tech@gmail.com"
   links = [
-    { github = "https://github.com/cph-ds303" }
+    { github = "https://github.com/copenhagentech" }
   ]
 
 # [params.author]
