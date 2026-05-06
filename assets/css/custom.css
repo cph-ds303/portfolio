@@ -889,6 +889,76 @@ a[role="button"]:hover {
   text-decoration: none !important;
 }
 
+.eru-repo-links {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.eru-repo-card {
+  display: block;
+  text-decoration: none !important;
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    box-shadow 0.24s ease;
+}
+
+.eru-repo-card {
+  position: relative;
+  padding: 1.25rem;
+  border: 1px solid rgba(var(--theme-border-rgb), 0.52);
+  border-radius: 1.15rem;
+  background:
+    linear-gradient(145deg, rgba(var(--theme-surface-strong-rgb), 0.96), rgba(var(--theme-surface-rgb), 0.88)),
+    radial-gradient(circle at top right, rgba(var(--theme-secondary-rgb), 0.16), transparent 38%);
+  box-shadow: 0 16px 32px rgba(8, 2, 15, 0.22);
+  overflow: hidden;
+}
+
+.eru-repo-card::before {
+  content: "</>";
+  position: absolute;
+  right: 1rem;
+  top: 0.85rem;
+  color: rgba(var(--theme-secondary-rgb), 0.42);
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.eru-repo-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--theme-secondary-rgb), 0.82);
+  box-shadow: 0 22px 40px rgba(8, 2, 15, 0.3);
+}
+
+.eru-repo-card__kicker,
+.eru-repo-card__title,
+.eru-repo-card__url {
+  display: block;
+}
+
+.eru-repo-card__kicker {
+  margin-bottom: 0.65rem;
+  color: rgba(var(--theme-secondary-rgb), 0.95);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.eru-repo-card__title {
+  margin-bottom: 0.45rem;
+  color: rgba(var(--theme-text-rgb), 1);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.eru-repo-card__url {
+  color: rgba(var(--theme-accent-rgb), 0.84);
+  overflow-wrap: anywhere;
+}
+
 .homepage-feature-links {
   display: grid;
   gap: 1rem;

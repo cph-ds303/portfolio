@@ -1,7 +1,9 @@
 {{ define "main" }}
   {{ .Scratch.Set "scope" "single" }}
   {{ $isExamPortfolio := in .RelPermalink "/projects/eru-project/exam-portfolio/" }}
-  <article class="portfolio-motion-page{{ if $isExamPortfolio }} exam-portfolio-demo-page{{ end }}">
+  {{ $isFrontendProcess := in .RelPermalink "/projects/eru-project/frontend-process/" }}
+  {{ $isEruProcessPage := or $isExamPortfolio $isFrontendProcess }}
+  <article class="portfolio-motion-page{{ if $isEruProcessPage }} exam-portfolio-demo-page{{ end }}">
     {{ if .Params.showHero | default (site.Params.article.showHero | default false) }}
       {{ $heroStyle := .Params.heroStyle }}
       {{ if not $heroStyle }}{{ $heroStyle = site.Params.article.heroStyle }}{{ end }}
@@ -43,7 +45,7 @@
 
       <div class="min-w-0 min-h-0 max-w-fit">
         {{ partial "series/series.html" . }}
-        <div class="article-content max-w-prose mb-20 portfolio-motion-content{{ if $isExamPortfolio }} exam-portfolio-demo-content{{ end }}">
+        <div class="article-content max-w-prose mb-20 portfolio-motion-content{{ if $isEruProcessPage }} exam-portfolio-demo-content{{ end }}">
           {{ .Content }}
           {{ $defaultReplyByEmail := site.Params.replyByEmail }}
           {{ $replyByEmail := default $defaultReplyByEmail .Params.replyByEmail }}
@@ -75,7 +77,7 @@
     </section>
 
     <footer class="pt-8 max-w-prose print:hidden">
-      {{ if not $isExamPortfolio }}
+      {{ if not $isEruProcessPage }}
         {{ partial "article-pagination.html" . }}
       {{ end }}
       {{ if .Params.showComments | default (site.Params.article.showComments | default false) }}

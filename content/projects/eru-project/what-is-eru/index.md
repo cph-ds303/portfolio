@@ -33,6 +33,14 @@ This is where **eru** comes in.
 I wanted to make something to counteract the negative effect that doom-scrolling had on me.
 So what if I could actually **learn something while scrolling**? Let's be honest, it would be a lot easier to have a healthy media platform than it would be to kick the phone addiction altogether.
 
+<div class="eru-repo-links">
+  <a class="eru-repo-card" href="https://github.com/copenhagentech/eru" target="_blank" rel="noopener noreferrer">
+    <span class="eru-repo-card__kicker">Repository</span>
+    <span class="eru-repo-card__title">Explore the eru codebase</span>
+    <span class="eru-repo-card__url">github.com/copenhagentech/eru</span>
+  </a>
+</div>
+
 <div class="exam-portfolio-pagination">
   <a role="button" href="../exam-portfolio/">Go to Backend Process</a>
   <a role="button" href="../frontend-process/">Go to Frontend Process</a>

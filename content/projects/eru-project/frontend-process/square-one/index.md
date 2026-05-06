@@ -10,6 +10,8 @@ showReadingTime: true
 <div class="exam-portfolio-nav">
   <a class="exam-portfolio-nav__link" href="../">Overview</a>
   <a class="exam-portfolio-nav__link exam-portfolio-nav__link--current" href="../square-one/">01</a>
+  <a class="exam-portfolio-nav__link" href="../react-set-go/">02</a>
+  <a class="exam-portfolio-nav__link" href="../route-awakening/">03</a>
 </div>
 
 ## Overview
@@ -202,4 +204,5 @@ For *eru*, this week was the first step from backend project to actual product. 
 
 <div class="exam-portfolio-pagination">
   <a role="button" href="../">Back To Overview</a>
+  <a role="button" href="../react-set-go/">Next Chapter</a>
 </div>
