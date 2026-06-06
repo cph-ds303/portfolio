@@ -36,7 +36,7 @@ The goal is to show how the project continues beyond the backend foundation and 
   <a class="exam-week-card" href="./route-awakening/">
     <p class="exam-week-card__eyebrow">03</p>
     <h3 class="exam-week-card__title">Route Awakening</h3>
-    <p class="exam-week-card__body">Moving into React Router, protected routes, frontend security, JWTs, roles, and deployment.</p>
+    <p class="exam-week-card__body">Connecting the frontend through React Router, protected routes, detail pages, and navigation flow.</p>
   </a>
 
 </div>
