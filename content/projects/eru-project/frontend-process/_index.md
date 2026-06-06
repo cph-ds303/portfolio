@@ -30,7 +30,7 @@ The goal is to show how the project continues beyond the backend foundation and 
   <a class="exam-week-card" href="./react-set-go/">
     <p class="exam-week-card__eyebrow">02</p>
     <h3 class="exam-week-card__title">React, Set, Go!</h3>
-    <p class="exam-week-card__body">Continuing with React through state, props, effects, controlled forms, CRUD, and mock API data.</p>
+    <p class="exam-week-card__body">Building the first real SPA flow through AuthPage, controlled forms, login and register state, JWT persistence, and backend API calls.</p>
   </a>
 
   <a class="exam-week-card" href="./route-awakening/">
