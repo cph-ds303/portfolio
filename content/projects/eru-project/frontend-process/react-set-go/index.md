@@ -12,6 +12,7 @@ showReadingTime: true
   <a class="exam-portfolio-nav__link" href="../square-one/">01</a>
   <a class="exam-portfolio-nav__link exam-portfolio-nav__link--current" href="../react-set-go/">02</a>
   <a class="exam-portfolio-nav__link" href="../route-awakening/">03</a>
+  <a class="exam-portfolio-nav__link" href="../beyond-the-frontend/">04</a>
 </div>
 
 ## Overview

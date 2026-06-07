@@ -12,6 +12,7 @@ showReadingTime: true
   <a class="exam-portfolio-nav__link" href="../square-one/">01</a>
   <a class="exam-portfolio-nav__link" href="../react-set-go/">02</a>
   <a class="exam-portfolio-nav__link exam-portfolio-nav__link--current" href="../route-awakening/">03</a>
+  <a class="exam-portfolio-nav__link" href="../beyond-the-frontend/">04</a>
 </div>
 
 ## Overview
@@ -202,4 +203,5 @@ See you on the final page, where we will be looking at deployment!
 <div class="exam-portfolio-pagination">
   <a role="button" href="../react-set-go/">Previous Chapter</a>
   <a role="button" href="../">Back To Overview</a>
+  <a role="button" href="../beyond-the-frontend/">Next Chapter</a>
 </div>

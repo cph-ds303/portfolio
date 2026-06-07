@@ -39,4 +39,10 @@ The goal is to show how the project continues beyond the backend foundation and 
     <p class="exam-week-card__body">Connecting the frontend through React Router, protected routes, detail pages, and navigation flow.</p>
   </a>
 
+  <a class="exam-week-card" href="./beyond-the-frontend/">
+    <p class="exam-week-card__eyebrow">04</p>
+    <h3 class="exam-week-card__title">Beyond the Frontend</h3>
+    <p class="exam-week-card__body">Reflecting on what remains to be built, where the platform could go next, and what the frontend process taught me about structure.</p>
+  </a>
+
 </div>
