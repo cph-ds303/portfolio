@@ -34,10 +34,10 @@ I wanted to make something to counteract the negative effect that doom-scrolling
 So what if I could actually **learn something while scrolling**? Let's be honest, it would be a lot easier to have a healthy media platform than it would be to kick the phone addiction altogether.
 
 <div class="eru-repo-links">
-  <a class="eru-repo-card" href="https://github.com/copenhagentech/eru" target="_blank" rel="noopener noreferrer">
+  <a class="eru-repo-card" href="https://github.com/saldic/eru" target="_blank" rel="noopener noreferrer">
     <span class="eru-repo-card__kicker">Repository</span>
     <span class="eru-repo-card__title">Explore the eru codebase</span>
-    <span class="eru-repo-card__url">github.com/copenhagentech/eru</span>
+    <span class="eru-repo-card__url">github.com/saldic/eru</span>
   </a>
 </div>
 
