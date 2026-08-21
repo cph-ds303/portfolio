@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <section class="intro-run" aria-labelledby="intro-run-title">
+    <header class="intro-run__hero">
+      <p class="intro-run__eyebrow">Velkommen til</p>
+      <h1 id="intro-run-title">{{ .Title }}</h1>
+      <div class="intro-run__description">{{ .Content }}</div>
+      <p class="intro-run__hint">Find den rigtige post, scan QR-koden, og løs opgaven sammen.</p>
+    </header>
+
+    <ol class="intro-run__grid" aria-label="Poster">
+      {{ range .Pages.ByWeight }}
+        <li>
+          <a class="intro-post-card" href="{{ .RelPermalink }}">
+            <span class="intro-post-card__number">Post {{ .Params.postNumber }}</span>
+            <span class="intro-post-card__title">{{ .Title }}</span>
+            <span class="intro-post-card__location">{{ .Params.location | default "Lokation kommer snart" }}</span>
+            <span class="intro-post-card__action">Åbn opgave <span aria-hidden="true">→</span></span>
+          </a>
+        </li>
+      {{ end }}
+    </ol>
+  </section>
+{{ end }}
