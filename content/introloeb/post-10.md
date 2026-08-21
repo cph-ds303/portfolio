@@ -1,10 +1,17 @@
 ---
-title: "Opgave kommer snart"
+title: "Hvad bliver min frokost?"
 postNumber: 10
-location: "Kopirum"
+location: "Kantinen"
 weight: 10
+showTaskContent: true
 ---
 
-## Klar til næste udfordring?
+I programmering tæller man altid pladserne i en liste fra 0.
 
-Opgaven til denne post bliver tilføjet snart.
+```text
+String[] kantineMenu = ["Sandwich", "Dagens ret", "Salatbar", "Pølsehorn"]
+
+String minFrokost = kantineMenu[2]
+```
+
+Hvad ender `minFrokost` med at være ifølge koden? Skriv jeres svar ned på det udleverede papir.

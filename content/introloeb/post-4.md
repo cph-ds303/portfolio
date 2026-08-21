@@ -1,10 +1,11 @@
 ---
-title: "Hvor mange stole er der her?"
+title: "TælStole"
 postNumber: 4
 location: "4. sal"
 weight: 4
+showTaskContent: true
 ---
 
-## Tæl stolene
+Hvor mange stole kan I tælle på billedet? Skriv jeres svar ned på det udleverede papir.
 
-Hvor mange stole er der på området? Bliv enige om ét svar.
+![Stole til tælleopgaven](/images/stole.png)

@@ -308,21 +308,39 @@ mark {
 
 .intro-task { padding: clamp(1.5rem, 5vw, 3.5rem); }
 
-.intro-task__back {
-  display: inline-block;
-  margin-bottom: 2.5rem;
-  color: rgba(var(--theme-secondary-rgb), 1);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.intro-task__back:hover { color: var(--theme-text); }
-
 .intro-task__location {
   margin: 2.5rem 0 0;
   color: rgba(var(--theme-muted-rgb), 1);
   font-size: clamp(1.1rem, 3vw, 1.4rem);
   font-weight: 700;
+}
+
+.intro-task__content {
+  max-width: 46rem;
+  margin-top: 2.5rem;
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+}
+
+.intro-task__content img {
+  display: block;
+  width: 100%;
+  margin-top: 2.5rem;
+  border: 1px solid rgba(var(--theme-border-rgb), 0.72);
+  border-radius: 0.85rem;
+  box-shadow: 0 12px 30px rgba(33, 5, 53, 0.25);
+}
+
+.intro-task__content .highlight-wrapper,
+.intro-task__content .highlight,
+.intro-task__content pre {
+  max-width: 100%;
+  overflow: visible;
+}
+
+.intro-task__content pre code {
+  white-space: pre-wrap;
+  font-size: clamp(0.78rem, 3vw, 1rem);
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 640px) {

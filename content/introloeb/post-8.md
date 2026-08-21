@@ -1,10 +1,9 @@
 ---
-title: "Opgave kommer snart"
+title: "Hvad koster ét print?"
 postNumber: 8
 location: "Kopirum"
 weight: 8
+showTaskContent: true
 ---
 
-## Klar til næste udfordring?
-
-Opgaven til denne post bliver tilføjet snart.
+Hvad koster det at printe ét stykke papir i kopirummet? Skriv svaret ned på det udleverede papir.

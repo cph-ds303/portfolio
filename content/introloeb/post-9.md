@@ -1,10 +1,9 @@
 ---
-title: "Opgave kommer snart"
+title: "FindTheFlag"
 postNumber: 9
 location: "Rygeren"
 weight: 9
+showTaskContent: true
 ---
 
-## Klar til næste udfordring?
-
-Opgaven til denne post bliver tilføjet snart.
+Hvilket flag kan I se ved rygeområdet? Skriv jeres svar ned på det udleverede papir.

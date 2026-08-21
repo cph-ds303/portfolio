@@ -2,11 +2,6 @@
 # The main menu is displayed in the header at the top of the page.
 
 [[main]]
-  name = "Orienteringsløb"
-  pageRef = "introloeb"
-  weight = 5
-
-[[main]]
   name = "Projects"
   pageRef = "projects"
   weight = 10

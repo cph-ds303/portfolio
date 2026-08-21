@@ -1,8 +1,12 @@
 {{ define "main" }}
   <article class="intro-task" aria-labelledby="intro-task-title">
-    <a class="intro-task__back" href="{{ .Parent.RelPermalink }}">← Alle poster</a>
     <p class="intro-task__eyebrow">Post {{ .Params.postNumber }}</p>
     <h1 id="intro-task-title">{{ .Title }}</h1>
     <p class="intro-task__location">{{ .Params.location | default "Lokation kommer snart" }}</p>
+    {{ if .Params.showTaskContent }}
+      <div class="intro-task__content">
+        {{ .Content }}
+      </div>
+    {{ end }}
   </article>
 {{ end }}
