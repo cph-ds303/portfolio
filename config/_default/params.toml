@@ -13,6 +13,10 @@ enableA11y = false
 enableSearch = true
 enableCodeCopy = false
 enableStructuredBreadcrumbs = false
+# Temporary event setting. When true, only /introloeb/ and its posts are shown;
+# all other URLs send visitors to the orientation run.
+orientationRunMode = true
+robots = "noindex, nofollow"
 # enableStyledScrollbar = true # disable to use native scrollbar style (defaults to true)
 
 replyByEmail = false
