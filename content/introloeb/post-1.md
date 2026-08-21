@@ -8,4 +8,4 @@ showTaskContent: true
 
 Åh nej! Der er gået kludder i vores stikdåser! Hjælp os med at finde den rigtige stikdåse, der er koblet til stikkontakten. Skriv derefter jeres svar ned på det udleverede papir.
 
-![Stikdåserne til spaghettikode-opgaven](/images/stikdåser.png)
+![Stikdåserne til spaghettikode-opgaven](/images/stikdoser.png)
