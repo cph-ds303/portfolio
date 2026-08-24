@@ -6,9 +6,6 @@ weight: 2
 showTaskContent: true
 ---
 
-Kan I knække den binære kode? Hvert tegn består af otte cifre. Oversæt koden til tekst og skriv svaret på det udleverede papir.
+Kan I knække den binære kode? Hvert tegn består af fem cifre. Oversæt koden til tekst og skriv svaret på det udleverede papir.
 
-```
-01001011 01000001 01000110 01000110 01000101
-01010000 01000001 01010101 01010011 01000101
-```
+<p class="binary-code" aria-label="Binær kode med ti tegn"><code>01011 00001 00110 00110 00101 10000 00001 10101 10011 00101</code></p>
