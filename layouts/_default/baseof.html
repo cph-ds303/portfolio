@@ -1,6 +1,4 @@
 <!doctype html>
-{{ $orientationRunMode := site.Params.orientationRunMode | default false }}
-{{ $isOrientationRunPage := eq .Section "introloeb" }}
 <html
   lang="{{ with site.Params.isoCode | default (site.LanguageCode | default `en`) }}{{- . -}}{{ end }}"
   dir="{{ cond (site.Params.rtl | default false) `rtl` `ltr` }}"
@@ -10,22 +8,22 @@
   {{- partial "head.html" . -}}
   {{- partialCached "init.html" . -}}
 
-  {{ $bodyLayout := "flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32" }}
+  {{ $standardBodyLayout := "flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32" }}
+  {{ $bodyLayout := cond .IsHome "minimal-body flex min-h-screen flex-col leading-7" $standardBodyLayout }}
   {{ $bodyColor := "text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral" }}
   <body class="{{ $bodyLayout }} {{ $bodyColor }} {{ if site.Params.enableStyledScrollbar | default true }}bf-scrollbar{{ end }}">
-    {{ if and $orientationRunMode $isOrientationRunPage }}
-      {{ partial "appearance-toggle.html" . }}
-    {{ end }}
-    {{ if not $orientationRunMode }}
-      <div class="portfolio-scroll-progress" aria-hidden="true"></div>
-      <div id="the-top" class="absolute flex self-center">
-        <a
-          class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
-          href="#main-content">
-          <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
-          {{ i18n "nav.skip_to_main" }}
-        </a>
-      </div>
+    <div class="portfolio-scroll-progress" aria-hidden="true"></div>
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        {{ i18n "nav.skip_to_main" }}
+      </a>
+    </div>
+    {{ if .IsHome }}
+      {{ partial "home-nav.html" . }}
+    {{ else }}
       {{ $header := print "header/" site.Params.header.layout ".html" }}
       {{ if templates.Exists ( printf "partials/%s" $header ) }}
         {{ partial $header . }}
@@ -35,20 +33,13 @@
     {{ end }}
     <div class="relative flex flex-col grow">
       <main id="main-content" class="grow">
-        {{ if or (not $orientationRunMode) $isOrientationRunPage }}
-          {{ block "main" . }}{{ end }}
-          {{ if and (not $orientationRunMode) (site.Params.footer.showScrollToTop | default true) }}
-            {{- partial "scroll-to-top.html" . -}}
-          {{ end }}
-        {{ else }}
-          <p class="text-center mt-12">Sender dig til <a href="{{ "introloeb/" | relLangURL }}">orienteringsløbet</a> …</p>
-          <script>window.location.replace({{ printf "%q" ("introloeb/" | relLangURL) | safeJS }});</script>
+        {{ block "main" . }}{{ end }}
+        {{ if site.Params.footer.showScrollToTop | default true }}
+          {{- partial "scroll-to-top.html" . -}}
         {{ end }}
       </main>
-      {{ if not $orientationRunMode }}
-        {{- partial "footer.html" . -}}
-      {{ end }}
-      {{ if and (not $orientationRunMode) (site.Params.enableSearch | default false) }}
+      {{- partial "footer.html" . -}}
+      {{ if site.Params.enableSearch | default false }}
         {{- partial "search.html" . -}}
       {{ end }}
     </div>

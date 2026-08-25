@@ -1,101 +1,184 @@
-<article class="homepage-intro portfolio-motion-page">
-  {{ with .Title }}
-    <header class="homepage-intro__header">
-      <h1 class="homepage-intro__title">{{ . | emojify }}</h1>
-    </header>
-  {{ end }}
-  <section class="homepage-intro__content prose dark:prose-invert portfolio-motion-content">{{ .Content }}</section>
-</article>
-<section class="homepage-feature-links portfolio-motion-content" aria-label="Featured links">
-  <a class="homepage-feature-card" href="{{ "projects/eru-project/" | relLangURL }}">
-    <span class="homepage-feature-card__kicker">Project</span>
-    <h2 class="homepage-feature-card__title">My most recent project.</h2>
-  </a>
-  <a class="homepage-feature-card" href="{{ "blog/first-steps/" | relLangURL }}">
-    <span class="homepage-feature-card__kicker">Blog Post</span>
-    <h2 class="homepage-feature-card__title">My first ever code.</h2>
-  </a>
-</section>
-<section class="homepage-recent portfolio-motion-content">
-  {{ partial "recent-articles/main.html" . }}
-</section>
+<div class="minimal-home minimal-home--clean-sections">
+  <section class="minimal-hero" aria-labelledby="minimal-hero-title">
+    <p class="minimal-eyebrow"><span>Portfolio · 2026</span><span>Copenhagen, Denmark</span></p>
+
+    <div class="minimal-title-marquee">
+      <h1 id="minimal-hero-title" class="minimal-title-marquee__track" aria-label="Computer Science Student">
+        <span class="minimal-title-marquee__set" aria-hidden="true">
+          <span class="minimal-title-marquee__item" lang="en">Computer Science Student</span>
+          <span class="minimal-title-marquee__item" lang="da">Datamatikerstuderende</span>
+          <span class="minimal-title-marquee__item" lang="bs">Student računarstva</span>
+          <span class="minimal-title-marquee__item" lang="en">Computer Science Student</span>
+          <span class="minimal-title-marquee__item" lang="fr">Étudiant en informatique</span>
+          <span class="minimal-title-marquee__item" lang="de">Informatikstudent</span>
+        </span>
+        <span class="minimal-title-marquee__set" aria-hidden="true">
+          <span class="minimal-title-marquee__item" lang="en">Computer Science Student</span>
+          <span class="minimal-title-marquee__item" lang="da">Datamatikerstuderende</span>
+          <span class="minimal-title-marquee__item" lang="bs">Student računarstva</span>
+          <span class="minimal-title-marquee__item" lang="en">Computer Science Student</span>
+          <span class="minimal-title-marquee__item" lang="fr">Étudiant en informatique</span>
+          <span class="minimal-title-marquee__item" lang="de">Informatikstudent</span>
+        </span>
+      </h1>
+    </div>
+
+    <div class="minimal-hero__footer">
+      <a class="minimal-availability" href="#contact" aria-label="Go to contact section">
+        <span class="minimal-availability__icon" aria-hidden="true">{{ partial "cat-mark.html" . }}</span>
+        <span class="minimal-availability__copy">
+          <strong>Open to internships</strong>
+          <small>Computer Science AP · Copenhagen</small>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <section id="about" class="minimal-section minimal-about" aria-labelledby="minimal-about-title">
+    <p class="minimal-label"><span>01</span> About</p>
+    <div class="minimal-about__content">
+      <h2 id="minimal-about-title">I build software<br>to understand it.</h2>
+      <div class="minimal-about__copy">
+        <div class="prose dark:prose-invert">{{ .Content }}</div>
+        <p class="minimal-stack">Java · REST APIs · Databases · Security · React · Deployment</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="minimal-section minimal-work" aria-labelledby="minimal-work-title">
+    <div class="minimal-work__heading">
+      <p class="minimal-label"><span>02</span> Selected work</p>
+      <h2 id="minimal-work-title">One project.<br>Several lessons.</h2>
+    </div>
+
+    <a class="minimal-feature" href="{{ "projects/eru-project/what-is-eru/" | relLangURL }}" aria-label="Read the story behind eru" data-tilt>
+      <figure><img src="{{ "images/mainscreen.png" | relURL }}" alt="The eru learning platform interface" loading="lazy"></figure>
+      <div class="minimal-feature__copy">
+        <p><span>01</span><span>eru · 2026</span></p>
+        <h3>A healthier way<br>to keep scrolling.</h3>
+        <span>Product idea, design and development <b aria-hidden="true">↗</b></span>
+      </div>
+    </a>
+
+    <nav class="minimal-project-list" aria-label="Project case studies">
+      <a href="{{ "projects/eru-project/exam-portfolio/" | relLangURL }}">
+        <span>02</span><strong>Backend process</strong><small>API · Security · Testing · Docker</small><b aria-hidden="true">↗</b>
+      </a>
+      <a href="{{ "projects/eru-project/frontend-process/" | relLangURL }}">
+        <span>03</span><strong>Frontend process</strong><small>React · Routes · Authentication</small><b aria-hidden="true">↗</b>
+      </a>
+      <a href="{{ "blog/first-steps/" | relLangURL }}">
+        <span>04</span><strong>First steps</strong><small>Processing · February 2025</small><b aria-hidden="true">↗</b>
+      </a>
+    </nav>
+  </section>
+
+  <section id="contact" class="minimal-contact" aria-labelledby="minimal-contact-title">
+    <p class="minimal-label"><span>03</span> Contact</p>
+    <h2 id="minimal-contact-title">Let’s talk.</h2>
+    <p class="minimal-contact__intro">About internships, software, or a project that refuses to behave.</p>
+    <a class="minimal-contact__mail" href="mailto:dinosaldic.tech@gmail.com">dinosaldic.tech@gmail.com <span aria-hidden="true">↗</span></a>
+    <nav aria-label="Social links">
+      <a href="https://github.com/saldic" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/dinosaldic/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a href="{{ "blog/" | relLangURL }}">Blog ↗</a>
+    </nav>
+    <div class="minimal-contact__icon" aria-hidden="true">{{ partial "cat-mark.html" . }}</div>
+  </section>
+</div>
+
+<div class="minimal-cursor" aria-hidden="true"></div>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const page = document.querySelector(".homepage-intro.portfolio-motion-page");
-    const contentBlocks = document.querySelectorAll(".portfolio-motion-content");
-    if (!page || !contentBlocks.length) return;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-    const heroHeading = page.querySelector("h1");
-    const paragraphs = document.querySelectorAll(".portfolio-motion-content p");
-    const headings = document.querySelectorAll(".portfolio-motion-content h2, .portfolio-motion-content h3");
-    const featureCards = document.querySelectorAll(".homepage-feature-card");
-    const listItems = document.querySelectorAll(".portfolio-motion-content ul li, .portfolio-motion-content ol li");
+    document.documentElement.style.scrollBehavior = reduceMotion ? "auto" : "smooth";
 
-    page.classList.add("js-scroll-ready");
-    heroHeading?.classList.add("portfolio-animate-in", "portfolio-heading-glow");
+    const updateScrollProgress = () => {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = maxScroll > 0 ? Math.min(window.scrollY / maxScroll, 1) : 0;
+      document.documentElement.style.setProperty("--portfolio-scroll-progress", progress.toString());
+    };
 
-    paragraphs.forEach((paragraph, index) => {
-      if (index < 2) {
-        paragraph.classList.add("portfolio-animate-in");
-      } else {
-        paragraph.classList.add("portfolio-reveal", "portfolio-reveal--soft");
-      }
-    });
+    updateScrollProgress();
+    window.addEventListener("scroll", updateScrollProgress, { passive: true });
 
-    headings.forEach((heading, index) => {
-      heading.classList.add("portfolio-reveal", index % 2 === 0 ? "portfolio-reveal--left" : "portfolio-reveal--right");
-    });
-
-    featureCards.forEach((card, index) => {
-      card.classList.add("portfolio-reveal", "portfolio-hover-lift", index % 2 === 0 ? "portfolio-reveal--left" : "portfolio-reveal--right");
-    });
-
-    listItems.forEach((item, index) => {
-      item.classList.add("portfolio-reveal", "portfolio-reveal--soft");
-      item.style.transitionDelay = `${Math.min(index % 6, 5) * 45}ms`;
-    });
-
-    const revealTargets = document.querySelectorAll(".portfolio-reveal");
-    if (!("IntersectionObserver" in window)) {
-      revealTargets.forEach((el) => el.classList.add("is-visible"));
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+    if (!reduceMotion && "IntersectionObserver" in window) {
+      const targets = document.querySelectorAll(".minimal-about__content, .minimal-work__heading, .minimal-feature, .minimal-project-list a");
+      targets.forEach((element) => element.classList.add("minimal-reveal"));
+      const observer = new IntersectionObserver(
+        (entries) => entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
             observer.unobserve(entry.target);
           }
+        }),
+        { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      );
+      targets.forEach((element) => observer.observe(element));
+    }
+
+    if (finePointer && !reduceMotion) {
+      const cursor = document.querySelector(".minimal-cursor");
+      const availability = document.querySelector(".minimal-availability");
+      let pointerX = window.innerWidth / 2;
+      let pointerY = window.innerHeight / 2;
+      let cursorX = pointerX;
+      let cursorY = pointerY;
+
+      document.body.classList.add("minimal-cursor-ready");
+
+      const animateCursor = () => {
+        cursorX += (pointerX - cursorX) * 0.18;
+        cursorY += (pointerY - cursorY) * 0.18;
+        if (cursor) cursor.style.translate = `${cursorX}px ${cursorY}px`;
+        window.requestAnimationFrame(animateCursor);
+      };
+
+      window.addEventListener("pointermove", (event) => {
+        pointerX = event.clientX;
+        pointerY = event.clientY;
+        cursor?.classList.add("is-visible");
+      }, { passive: true });
+
+      document.documentElement.addEventListener("mouseleave", () => cursor?.classList.remove("is-visible"));
+
+      const setAvailabilityIconSpeed = (rate) => {
+        availability?.querySelector(".minimal-availability__icon")
+          ?.getAnimations()
+          .forEach((animation) => animation.updatePlaybackRate(rate));
+      };
+
+      availability?.addEventListener("pointerenter", () => {
+        setAvailabilityIconSpeed(2.25);
+      });
+
+      availability?.addEventListener("pointerleave", () => {
+        setAvailabilityIconSpeed(1);
+      });
+
+      document.querySelectorAll("a, button").forEach((element) => {
+        element.addEventListener("pointerenter", () => cursor?.classList.add("is-link"));
+        element.addEventListener("pointerleave", () => cursor?.classList.remove("is-link"));
+      });
+
+      document.querySelectorAll("[data-tilt]").forEach((element) => {
+        element.addEventListener("pointermove", (event) => {
+          const bounds = element.getBoundingClientRect();
+          const x = Math.min(Math.max((event.clientX - bounds.left) / bounds.width, 0), 1);
+          const y = Math.min(Math.max((event.clientY - bounds.top) / bounds.height, 0), 1);
+          element.style.setProperty("--minimal-tilt-x", `${(0.5 - y) * 1.4}deg`);
+          element.style.setProperty("--minimal-tilt-y", `${(x - 0.5) * 1.4}deg`);
+        }, { passive: true });
+        element.addEventListener("pointerleave", () => {
+          element.style.setProperty("--minimal-tilt-x", "0deg");
+          element.style.setProperty("--minimal-tilt-y", "0deg");
         });
-      },
-      {
-        threshold: 0.16,
-        rootMargin: "0px 0px -8% 0px",
-      }
-    );
+      });
 
-    revealTargets.forEach((el) => observer.observe(el));
-
-    const updateMotionChrome = () => {
-      const scrollTop = window.scrollY || window.pageYOffset;
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = scrollHeight > 0 ? Math.min(scrollTop / scrollHeight, 1) : 0;
-      document.documentElement.style.setProperty("--portfolio-scroll-progress", progress.toString());
-      document.documentElement.style.setProperty("--portfolio-parallax-offset", `${scrollTop * -0.025}px`);
-    };
-
-    updateMotionChrome();
-    let ticking = false;
-    window.addEventListener("scroll", () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          updateMotionChrome();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
+      animateCursor();
+    }
   });
 </script>

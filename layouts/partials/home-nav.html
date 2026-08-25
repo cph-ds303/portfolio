@@ -1,0 +1,17 @@
+<header class="minimal-nav">
+  <a class="minimal-nav__identity" href="{{ "" | relLangURL }}" aria-label="Dino Saldic — home">
+    <span class="minimal-nav__mark">{{ partial "cat-mark.html" . }}</span>
+    <strong>Dino Saldic</strong>
+  </a>
+  <nav aria-label="Homepage controls">
+    <button
+      id="appearance-switcher"
+      class="minimal-nav__theme"
+      type="button"
+      aria-label="Switch between light and dark mode"
+      title="Switch between light and dark mode">
+      <span class="dark:hidden" aria-hidden="true">Dark</span>
+      <span class="hidden dark:inline" aria-hidden="true">Light</span>
+    </button>
+  </nav>
+</header>
