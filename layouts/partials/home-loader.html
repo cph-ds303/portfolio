@@ -1,0 +1,42 @@
+<script>document.documentElement.classList.add("minimal-loader-enabled");</script>
+
+<div class="minimal-loader" aria-hidden="true">
+  <div class="minimal-loader__inner">
+    <div class="minimal-loader__mark">{{ partial "cat-mark.html" . }}</div>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const root = document.documentElement;
+    const loader = document.querySelector(".minimal-loader");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const startedAt = performance.now();
+    const minimumDuration = reduceMotion ? 0 : 1850;
+    let finished = false;
+
+    const revealSite = () => {
+      if (finished || !loader) return;
+      finished = true;
+
+      const remaining = Math.max(0, minimumDuration - (performance.now() - startedAt));
+      window.setTimeout(() => {
+        root.classList.add("minimal-site-ready");
+        loader.classList.add("is-leaving");
+
+        window.setTimeout(() => {
+          loader.remove();
+          root.classList.remove("minimal-loader-enabled");
+        }, reduceMotion ? 0 : 900);
+      }, remaining);
+    };
+
+    if (document.readyState === "complete") {
+      revealSite();
+    } else {
+      window.addEventListener("load", revealSite, { once: true });
+    }
+
+    window.setTimeout(revealSite, 4000);
+  })();
+</script>

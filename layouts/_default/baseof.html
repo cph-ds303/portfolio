@@ -12,6 +12,9 @@
   {{ $bodyLayout := cond .IsHome "minimal-body flex min-h-screen flex-col leading-7" $standardBodyLayout }}
   {{ $bodyColor := "text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral" }}
   <body class="{{ $bodyLayout }} {{ $bodyColor }} {{ if site.Params.enableStyledScrollbar | default true }}bf-scrollbar{{ end }}">
+    {{ if .IsHome }}
+      {{ partial "home-loader.html" . }}
+    {{ end }}
     <div class="portfolio-scroll-progress" aria-hidden="true"></div>
     <div id="the-top" class="absolute flex self-center">
       <a
